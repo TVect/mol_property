@@ -2,6 +2,22 @@
 
 Prediction of pKa from chemical structure using machine learning approaches, and some other property
 
+## Properties
+
+- **pKa**
+ref: [Prediction of pKa from chemical structure using free and open-source tools](https://cfpub.epa.gov/si/si_public_file_download.cfm?p_download_id=535243&Lab=NCCT)
+
+- **logS**
+ref: [github: solubility](https://github.com/PatWalters/solubility.git)
+
+## install
+```
+git clone https://github.com/TVect/mol_property.git
+cd mol_property
+python setup.py install
+```
+
+## Usage
 ```
 from rdkit import Chem
 from mol_property import property_api
