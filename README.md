@@ -1,13 +1,17 @@
 # mol_property
 
-Prediction of pKa from chemical structure using machine learning approaches, and some other property
+Prediction of pKa from chemical structure using machine learning approaches.
+
+The repository also calculate some other property, such as solubility, number of Rotatable Bonds.
 
 ## Properties
 
 - **pKa**
+
 ref: [Prediction of pKa from chemical structure using free and open-source tools](https://cfpub.epa.gov/si/si_public_file_download.cfm?p_download_id=535243&Lab=NCCT)
 
 - **logS**
+
 ref: [github: solubility](https://github.com/PatWalters/solubility.git)
 
 ## install
