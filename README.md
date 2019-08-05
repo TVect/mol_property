@@ -15,11 +15,23 @@ ref: [Prediction of pKa from chemical structure using free and open-source tools
 ref: [github: solubility](https://github.com/PatWalters/solubility.git)
 
 ## install
+
+- **python package**
 ```
 git clone https://github.com/TVect/mol_property.git
 cd mol_property
 python setup.py install
 ```
+
+- **conda package**
+reference: https://github.com/fastai/fastai/blob/master/conda/meta.yaml
+```
+git clone https://github.com/TVect/mol_property.git
+cd mol_property
+python setup.py sdist
+conda build conda/
+```
+
 
 ## Usage
 ```

@@ -1,0 +1,64 @@
+# full guide of options:
+# https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html
+
+# also perhaps we don't need the recipe at all?
+# https://conda.io/docs/user-guide/tasks/build-packages/build-without-recipe.html
+
+# To see what comes out after this template is processed, run:
+#    conda-render ./conda/
+
+{% set data = load_setup_py_data(setup_file='../setup.py', from_recipe_dir=True) %}
+
+package:
+  name: {{ data.name }}
+  version: "{{ data.version }}"
+
+source:
+  # Source from a local path
+  # path: ..
+
+  # Source from tarball
+  # note: must 'make dist-pypi' or `python setup.py sdist` before running conda-build as we now rely on MANIFEST.IN to only pick desired files and avoid copying data folders and alike - and its puts its clean tarball under /dist/:
+  url: ../dist/{{ data.name }}-{{ data.version }}.tar.gz
+  # url: https://pypi.python.org/packages/source/fastai/fastai/fastai-1.0.0b.tar.gz
+  # sha1: f0a2c9a30073449cfb7d171c57552f3109d93894
+
+
+build:
+  number: 1
+  noarch: python
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+
+requirements:
+  build:
+    - conda-build
+    - pytest-runner
+    - python
+
+  run:
+    - numpy >=1.16.3
+    - pandas >=0.24.2
+    - rdkit
+    - scikit-learn =0.21.1
+
+test:
+  imports:
+    - mol_property
+
+  requires:
+    - python
+    - pytest
+    - responses
+
+about:
+  home: {{ data.get('url') }}
+  summary: {{ data['description'] }}
+  description: |
+    {{ data['long_description'] | replace("\n", "\n    ") | replace("#", '\#')}}
+
+extra:
+  deploy:
+    - anaconda-client
+    - setuptools >=0.39
+    - twine >=1.12
+  recipe-maintainers: ''
