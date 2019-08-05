@@ -17,6 +17,7 @@ ref: [github: solubility](https://github.com/PatWalters/solubility.git)
 ## install
 
 - **python package**
+
 ```
 git clone https://github.com/TVect/mol_property.git
 cd mol_property
@@ -24,7 +25,9 @@ python setup.py install
 ```
 
 - **conda package**
+
 reference: https://github.com/fastai/fastai/blob/master/conda/meta.yaml
+
 ```
 git clone https://github.com/TVect/mol_property.git
 cd mol_property
@@ -34,6 +37,7 @@ conda build conda/
 
 
 ## Usage
+
 ```
 from rdkit import Chem
 from mol_property import property_api
