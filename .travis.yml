@@ -6,6 +6,10 @@ python: 3.6
 # Install the codecov pip dependency
 install:
   - pip install codecov
+  - pip install numpy==1.16.3
+  - pip install pandas==0.24.2
+  - pip install scikit_learn==0.21.1
+  - conda install -c rdkit rdkit
 
 # Run the unit test
 script:
