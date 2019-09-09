@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import os
 import numpy as np
 import pandas as pd
 import rdkit
 from rdkit import Chem, DataStructs
 from rdkit.Chem import AllChem, Descriptors
 
+DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "./train/data/pKaInWater.csv")
 
 def rdkit_numpy_convert(fp):
     output = []
@@ -18,7 +20,7 @@ def rdkit_numpy_convert(fp):
 
 class DataUtils(object):
 
-    def __init__(self, filepath="./data/pKaInWater.csv"):
+    def __init__(self, filepath=DATA_PATH):
         self.filepath = filepath
 
         self.df_pka = pd.read_csv(self.filepath)
@@ -92,9 +94,3 @@ class DataUtils(object):
         elif feature_type == "morgan+macc":
             return np.concatenate([rdkit_numpy_convert(fp_morgan), rdkit_numpy_convert(fp_macc)], axis=1)
 
-
-if __name__ == "__main__":
-    d_utils = DataUtils()
-    # X_data, y_data = d_utils.get_regression_data(data_category="basic_only", feature_type="morgan")
-    # print(X_data.shape, len(y_data))
-    d_utils.get_classification_data(feature_type="morgan")

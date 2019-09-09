@@ -60,4 +60,5 @@ class TestPropertyAPI():
 
     def test_SMILES(self):
         smiles = property_api.get_SMILES(self.mol)
-        
+        assert smiles == "Brc1ccc2c(c1)CCN2"
+

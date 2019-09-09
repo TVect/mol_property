@@ -30,15 +30,3 @@ class PkaPredictor(object):
             rets.append(ret)
         return rets
 
-
-if __name__ == "__main__":
-    predictor = PkaPredictor(model_dir="./model")
-    from rdkit import Chem
-    smis = ["Brc(cc1)cc(C2[P+](c3ccccc3)(c3ccccc3)c3ccccc3)c1-c1c2cccc1", 
-            "Brc(cc1)cc2c1NCC2",
-            "Brc(cc1)ccc1-c1cnc(-c2ccccc2)o1",
-            "Brc(cc1)ccc1-c1ncc(-c2ccccc2)o1",
-            "Brc(cc1)ccc1-c1nnn[nH]1"]
-    mols = [Chem.MolFromSmiles(smi) for smi in smis]
-    rets = predictor.predict(mols)
-    print(rets)
