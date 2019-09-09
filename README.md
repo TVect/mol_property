@@ -1,5 +1,7 @@
 # mol_property
 
+[![codecov](https://codecov.io/gh/TVect/mol_property/branch/master/graph/badge.svg)](https://codecov.io/gh/TVect/mol_property)
+
 Prediction of pKa from chemical structure using machine learning approaches.
 
 The repository also calculate some other property, such as solubility, number of Rotatable Bonds.
