@@ -1,6 +1,6 @@
 # mol_property
 
-[![codecov](https://codecov.io/gh/TVect/mol_property/branch/master/graph/badge.svg)](https://codecov.io/gh/TVect/mol_property)
+[![Build Status](https://api.travis-ci.com/TVect/mol_property.svg?branch=master)](https://api.travis-ci.com/TVect/mol_property.svg)    [![codecov](https://codecov.io/gh/TVect/mol_property/branch/master/graph/badge.svg)](https://codecov.io/gh/TVect/mol_property)
 
 Prediction of pKa from chemical structure using machine learning approaches.
 
