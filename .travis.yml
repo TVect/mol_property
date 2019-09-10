@@ -29,6 +29,7 @@ install:
   - pip install numpy==1.16.3
   - pip install pandas==0.24.2
   - pip install scikit_learn==0.21.1
+  - pip install xgboost==0.81
   - conda install -y -c rdkit rdkit
 
 # Run the unit test
