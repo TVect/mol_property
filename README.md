@@ -4,7 +4,17 @@
 
 Prediction of pKa from chemical structure using machine learning approaches.
 
-The repository also calculate some other property, such as solubility, number of Rotatable Bonds.
+The repository also include some other functions, such as calculating a variety of molecular properties, and finding a most similar molecule ...
+
+```
+mol_property/
+├── pka/    # Prediction of pKa from chemical structure using machine learning approaches.
+│
+├── similarity/    # molecular similarity: find the most similar molecules
+│
+├── property_api.py    # calculate some other molecular properties, such as solubility, number of Rotatable Bonds.
+
+```
 
 ## Properties
 
