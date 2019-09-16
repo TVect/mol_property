@@ -30,6 +30,9 @@ install:
   - pip install pandas==0.24.2
   - pip install scikit_learn==0.21.1
   - pip install xgboost==0.81
+  - pip install bitarray==1.0.1
+  - pip install tqdm==4.32.1
+  - conda install -y -c pytorch faiss-cpu
   - conda install -y -c rdkit rdkit
 
 # Run the unit test

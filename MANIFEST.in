@@ -1,1 +1,2 @@
 include mol_property/pka/model/*.pkl
+include mol_property/similarity/save/*.zip

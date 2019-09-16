@@ -40,15 +40,19 @@ requirements:
     - pandas >=0.24.2
     - rdkit
     - scikit-learn =0.21.1
+    - xgboost =0.81
+    - bitarray =1.0.1
+    - faiss-cpu =1.5.3
+    - tqdm =4.32.1
 
-test:
-  imports:
-    - mol_property
+# test:
+#   imports:
+#     - mol_property
 
-  requires:
-    - python
-    - pytest
-    - responses
+#   requires:
+#     - python
+#     - pytest
+#     - responses
 
 about:
   home: {{ data.get('url') }}
