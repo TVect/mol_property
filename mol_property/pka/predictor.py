@@ -1,7 +1,7 @@
 # -*- coding: utf-8
 
 import os
-from sklearn.externals import joblib
+import joblib
 from .data_utils import DataUtils
 
 class PkaPredictor(object):
