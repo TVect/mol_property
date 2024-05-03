@@ -5,4 +5,4 @@ scikit_learn==0.21.1
 xgboost==0.81
 bitarray==1.0.1
 faiss==1.5.3
-tqdm==4.32.1
+tqdm==4.66.3
